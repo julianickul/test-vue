@@ -1,0 +1,20 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.insertSpaces": true,
+  "editor.tabSize": 2,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "[vue]": {
+    "editor.formatOnSave": true
+  },
+  "eslint.validate": ["javascript", "vue"],
+  "eslint.workingDirectories": [{ "mode": "auto" }],
+  "prettier.semi": true,
+  "prettier.singleQuote": true,
+  "prettier.printWidth": 100,
+  "prettier.trailingComma": "es5",
+  "prettier.useTabs": false,
+  "prettier.tabWidth": 2
+}

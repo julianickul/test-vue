@@ -1,0 +1,167 @@
+{
+  "name": "pharmacy",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build --mode production",
+    "lint": "vue-cli-service lint",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "core-js": "^3.8.3",
+    "element-plus": "^2.5.6",
+    "vue": "^3.4.20",
+    "vue-router": "^4.0.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.16",
+    "@babel/eslint-parser": "^7.12.16",
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-eslint": "~5.0.0",
+    "@vue/cli-plugin-router": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-unicorn": "^24.0.0",
+    "eslint-plugin-vue": "^8.0.3",
+    "lint-staged": "^11.1.2",
+    "prettier": "^2.4.1",
+    "sass": "^1.32.7",
+    "sass-loader": "^12.0.0",
+    "eslint-plugin-simple-import-sort": "^12.1.1"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "plugins": [
+      "prettier",
+      "unicorn",
+      "simple-import-sort"
+    ],
+    "extends": [
+      "plugin:vue/vue3-essential",
+      "eslint:recommended",
+      "prettier"
+    ],
+    "parserOptions": {
+      "parser": "@babel/eslint-parser"
+    },
+    "rules": {
+      "indent": [
+        "error",
+        2
+      ],
+      "curly": [
+        "error",
+        "all"
+      ],
+      "quotes": [
+        "error",
+        "backtick"
+      ],
+      "max-len": [
+        "error",
+        {
+          "code": 140,
+          "ignoreUrls": true
+        }
+      ],
+      "vue/max-attributes-per-line": [
+        "error",
+        {
+          "singleline": {
+            "max": 2
+          },
+          "multiline": {
+            "max": 1
+          }
+        }
+      ],
+      "vue/attribute-hyphenation": [
+        "error",
+        "never"
+      ],
+      "unicorn/filename-case": [
+        "error",
+        {
+          "case": "pascalCase",
+          "ignore": [
+            "^(bootstrap|main|constants)\\.js$",
+            "^babel\\.config\\.js$",
+            "^vue\\.config\\.js$"
+          ]
+        }
+      ],
+      "vue/first-attribute-linebreak": [
+        "error",
+        {
+          "singleline": "beside",
+          "multiline": "below"
+        }
+      ],
+      "vue/html-indent": [
+        "error",
+        2,
+        {
+          "attribute": 1,
+          "baseIndent": 1,
+          "closeBracket": 0,
+          "alignAttributesVertically": false
+        }
+      ],
+      "simple-import-sort/imports": [
+        "error",
+        {
+          "groups": [
+            [
+              "^\\u0000"
+            ],
+            [
+              "^vue$",
+              "^vue-router$",
+              "^@vue/"
+            ],
+            [
+              "^@?\\w"
+            ],
+            [
+              "^@/"
+            ],
+            [
+              "^\\.\\.(?!/?$)",
+              "^\\.\\./?$"
+            ],
+            [
+              "^\\./(?=.*/)(?!/?$)",
+              "^\\.(?!/?$)",
+              "^\\./?$"
+            ],
+            [
+              "^.+\\.(?:css|scss|sass|less)$"
+            ],
+            [
+              "^.+\\.(?:png|jpe?g|gif|webp|avif|svg|ico)$"
+            ]
+          ]
+        }
+      ],
+      "simple-import-sort/exports": "error"
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ],
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,vue}": "vue-cli-service lint"
+  }
+}
